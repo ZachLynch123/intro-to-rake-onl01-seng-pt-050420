@@ -10,6 +10,11 @@ namespace :greeting do
   end
 end
 
+desc 'drop into the Pry coinsole'
+  task :console => environment do
+    Pry.start 
+  end
+
 namespace :db do
   desc 'migrate changes to your database'
   task :environment do
@@ -25,7 +30,3 @@ namespace :db do
   
 end
 
-desc 'drop into the Pry coinsole'
-  task :console => environment do
-    Pry.start 
-  end
